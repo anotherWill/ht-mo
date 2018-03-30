@@ -1,3 +1,5 @@
+@import "./common/_common.css"; 
+
 body {
   img {
     width: 325px;
@@ -14,6 +16,15 @@ body {
     height: 32px;
     font-size: 18px;
   }
+}
+
+::placeholder {
+  color: blue;
+}
+
+.bg {
+  background: url('../images/p3.png');
+  height: 100px;
 }
 
 .className {
