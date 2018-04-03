@@ -1,6 +1,98 @@
 @import "normalize.css"; 
 
-.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix:after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+@svg 1px-border {
+  height: 2px;
+  @rect {
+    fill: var(--color, black);
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@svg square { 
+  @rect { 
+    fill: var(--color, black); 
+    width: 100%; 
+    height: 100%; 
+  } 
+}
+
+
+@font-face {
+  font-family: 'icons';
+  src: url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_b8e5ea1.eot');
+  src: url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_b8e5ea1.eot#iefix') format('embedded-opentype'), 
+      url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_04b353e.woff') format('woff'), 
+      url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_2681c2d.ttf') format('truetype'), 
+      url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_b8f8f01.svg#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[aspectratio] { 
+  position: relative; 
+} 
+
+[aspectratio]::before { 
+  content: ''; 
+  display: block; 
+  width: 1px; 
+  margin-left: -1px; 
+  height: 0; 
+} 
+
+/*[aspectratio]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}*/
+
+
+[flexContainer] {
+  width: 750px;
+}
+
+[aspectratio-content] { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  width: 100%; 
+  height: 100%; 
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  content: normal !important;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+
 
 
 

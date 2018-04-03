@@ -56,7 +56,7 @@ var cssLoader = [
 let webpackConfig = {
   entry: entries(),
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
   },
   output: {
     path: path.resolve(__dirname, '.', 'dist'),
@@ -84,7 +84,7 @@ let webpackConfig = {
         })
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         use: {
           loader: 'url-loader',
           options: {
@@ -113,8 +113,8 @@ let webpackConfig = {
         }]
       },
       {
-        test: /\.(woff2?|eot|ttf)(\?.*)?$/,
-        loader: "url-loader?name=/fonts/[name].[ext]"
+        test: /\.(woff|woff2?|eot|ttf)(\?.*)?$/,
+        loader: "url-loader?name=fonts/[name].[ext]"
       },
     ]
   },

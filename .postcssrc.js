@@ -11,8 +11,8 @@ module.exports = {
     },
     "postcss-cssnext": { autoprefixer: false }, 
     "postcss-px-to-viewport": { 
-      viewportWidth: 1200, // (Number) The width of the viewport. 
-      viewportHeight: 800, // (Number) The height of the viewport. 
+      viewportWidth: 750, // (Number) The width of the viewport. 
+      viewportHeight: 1334, // (Number) The height of the viewport. 
       unitPrecision: 5, // (Number) The decimal numbers to allow the REM units to grow to.
       viewportUnit: 'vw', // (String) Expected units. 
       selectorBlackList: ['.ignore', '.hairlines'], // (Array) The selectors to ignore and leave as px. 
