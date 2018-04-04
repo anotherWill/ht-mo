@@ -1,5 +1,6 @@
 # Mobile Page: webpack + handlebars + postcss
 
+A template about mobile page
 ------
 
 ## Usage
