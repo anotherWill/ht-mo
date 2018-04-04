@@ -2,6 +2,11 @@
 
 ------
 
+## Usage
+`
+npm i && npm start
+`
+
 > * webpack multiple entries
 > * handlebars template
 > * postcss
