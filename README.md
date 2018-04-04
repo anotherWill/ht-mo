@@ -24,10 +24,10 @@ We can use SVG replace Font Icon certainly.
 2、@font-face url()
 
 ## Need to be optimized
-- [] webpack-dev-server recompiled very slowly
-- [] webpack env donot define
-- [] compression
-- [] code spliting
-- [] Few handlebars helper
-- [] add jquery 
-- [] ....
+- [ ] webpack-dev-server recompiled very slowly
+- [ ] webpack env donot define
+- [ ] compression
+- [ ] code spliting
+- [ ] Few handlebars helper
+- [ ] add jquery 
+- [ ] ....
