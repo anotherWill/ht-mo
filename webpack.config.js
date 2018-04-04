@@ -49,7 +49,12 @@ var cssLoader = [
         path: './postcssrc.js'
       }
     }
-  }
+  },
+  'resolve-url-loader',
+  // { 
+  //   loader: 'sass-loader', 
+  //   options: { sourceMap: true } 
+  // }
 ];
 
 
@@ -93,6 +98,7 @@ let webpackConfig = {
           }
         }
       },
+      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
       {
         test: /\.hbs$/,
         use: [{
@@ -111,10 +117,6 @@ let webpackConfig = {
         }, {
           loader: 'html-loader'
         }]
-      },
-      {
-        test: /\.(woff|woff2?|eot|ttf)(\?.*)?$/,
-        loader: "url-loader?name=fonts/[name].[ext]"
       },
     ]
   },

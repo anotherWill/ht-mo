@@ -1,5 +1,9 @@
 @import "normalize.css"; 
 
+@use cssnext;
+
+:root { --eot-path: './fonts/iconfot.eot'; }
+
 .clearfix:after{
   content:".";
   display:block;
@@ -25,14 +29,13 @@
   } 
 }
 
-
 @font-face {
   font-family: 'icons';
-  src: url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_b8e5ea1.eot');
-  src: url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_b8e5ea1.eot#iefix') format('embedded-opentype'), 
-      url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_04b353e.woff') format('woff'), 
-      url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_2681c2d.ttf') format('truetype'), 
-      url('https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/iconfont/iconfont_b8f8f01.svg#iconfont') format('svg');
+  src: url('~/../../fonts/iconfont.eot');
+  src: url('~/../../fonts/iconfont_iefix.eot') format('embedded-opentype'), 
+      url('~/../../fonts/iconfont.woff') format('woff'), 
+      url('~/../../fonts/iconfont.ttf') format('truetype'), 
+      url('~/../../fonts/iconfont.svg#iconfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }

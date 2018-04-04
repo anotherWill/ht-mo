@@ -22,14 +22,11 @@
     color: #333;
     float: left;
     margin-left: 32px;
-    .head-icon {
-
-      &::before {
-        content: '\e911';
-        color: #333;
-        font: 44px/1 icons;
-        display: inline-block;
-      }
+    .head-icon::before {
+      content: '\e911';
+      color: #333;
+      font: 44px/1 icons;
+      display: inline-block;
     }
   }
 
