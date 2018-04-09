@@ -1,10 +1,11 @@
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ExtractCSS = new ExtractTextPlugin('./css/[name].[hash].css');
 const glob = require('glob')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ENV = process.env.NODE_ENV
 
 const pages = require('./src/pages/pages');
 let hbsPages = [];
@@ -57,12 +58,8 @@ var cssLoader = [
   // }
 ];
 
-
 let webpackConfig = {
   entry: entries(),
-  devServer: {
-    contentBase: './dist',
-  },
   output: {
     path: path.resolve(__dirname, '.', 'dist'),
     publicPath: '/',
@@ -98,7 +95,7 @@ let webpackConfig = {
           }
         }
       },
-      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000&name=fonts/[name].[ext]' },
       {
         test: /\.hbs$/,
         use: [{
@@ -120,13 +117,22 @@ let webpackConfig = {
       },
     ]
   },
-  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
       VERSION: JSON.stringify("5fa3b9"),
     }),
     ExtractCSS
   ]
+}
+
+if (ENV === 'dev') {
+  webpackConfig.devServer = {
+    contentBase: './dist',
+    port: 8082
+  };
+  webpackConfig.devtool = 'eval'
+} else {
+  webpackConfig.devtool = 'source-map'
 }
 
 webpackConfig.plugins = webpackConfig.plugins.concat(hbsPages)
